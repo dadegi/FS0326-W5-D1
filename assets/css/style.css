@@ -1,0 +1,73 @@
+*,
+*::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+}
+
+header {
+	text-align: center;
+}
+
+nav ul li {
+	list-style-type: none;
+}
+
+main {
+	width: 80%;
+	margin: 0 auto;
+}
+
+main div {
+	height: 200px;
+	border: 2px solid black;
+}
+
+@media screen and (min-width: 768px) {
+	main div:not(:last-child) {
+		width: 48%;
+		display: inline-block;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	nav ul {
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	nav ul li {
+		display: inline;
+		margin-right: 10px;
+	}
+
+	nav ul li a:hover {
+		color: red;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	main div:last-child,
+	main div:not(:last-child) {
+		display: inline-block;
+		width: 30%;
+		margin-right: 20px;
+	}
+}
+
+@media print {
+	nav {
+		display: none;
+	}
+
+	header img {
+		width: 20%;
+	}
+}
